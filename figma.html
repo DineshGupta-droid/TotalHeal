@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #dddadac2;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #030303c2;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(255, 253, 253);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #eb7b1f;
+  color: rgb(255, 255, 255);
+}
+
+.topnav a.active {
+  background-color: #eb7b1f;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  margin-right: 2px;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #eb7b1f;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #d4d4d4;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+
+}
+.searchbox {  
+float: left;  
+}  
+
+.text1 {  
+ 
+    padding: 10px;
+    margin-top: 33px;
+    font-size: 17px;
+    border: none;
+    margin-left: 563px;
+    width: 733px;
+}  
+.searchbox button {  
+  
+padding: 8px;  
+margin-top: 10px;  
+margin-left: 10px;  
+background: #eb7b1f;  
+font-size: 20px;  
+border: none;  
+cursor: pointer;  
+}  
+.searchbox button:hover {  
+background: rgb(194, 143, 86);  
+}  
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	--primary-c: #000000;
+	--secondary-c: #B2D7F5;
+	
+	--white: #FDFBFB;
+	
+	--text: #082943;	
+	--bg: var(--primary-c);
+}
+
+
+/* Basic Config
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+ul {
+	list-style-type: none;
+	padding-left: 50px;
+	margin: 0;
+}
+
+li {
+	display: block;
+	position: relative;
+	padding: 20px 0px;
+}
+
+h2 {
+	margin: 10px 0;
+	font-weight: 900;
+}
+
+
+/* Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card {
+  display: flex;
+    flex-direction: column;
+    background: var(--white);
+    width: 300px;
+    padding: 4px 25px;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 13%);
+    margin-top: 235px;
+    margin-left: 170px;
+}
+
+
+
+.card2 {
+  display: flex;
+    flex-direction: column;
+    background: var(--white);
+    width: 328px;
+    padding: 9px 25px;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 13%);
+    margin-top: -443px;
+    margin-left: 550px;
+    height: 496px;
+}
+.card3 {
+  display: flex;
+    flex-direction: column;
+    background: var(--white);
+    width: 328px;
+    padding: 8px 25px;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 13%);
+    margin-top: -495px;
+    margin-left: 935px;
+    height: 496px;
+}
+.card4 {
+  display: flex;
+    flex-direction: column;
+    background: var(--white);
+    width: 328px;
+    padding: 9px 25px;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 13%);
+    margin-top: -500px;
+    margin-left: 1316px;
+    height: 496px;
+}
+
+/* Radio Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type=radio] {
+	position: absolute;
+	visibility: hidden;
+}
+
+
+
+.check {
+	width: 30px; height: 30px;
+	position: absolute;
+	border-radius: 50%;
+	transition: transform .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Reset */
+input#one ~ .check { 
+	transform: translate(-50px, -25px); 
+	background: var(--secondary-c); 
+}
+input#two ~ .check { 
+	transform: translate(-50px, -83px); 
+	background: var(--primary-c);
+	
+}
+input#three ~ .check { 
+	transform: translate(-50px, -83px); 
+	background: var(--primary-c);
+	
+}
+input#four ~ .check { 
+	transform: translate(-50px, -83px); 
+	background: var(--primary-c);
+	
+}
+input#five ~ .check { 
+	transform: translate(-50px, -83px); 
+	background: var(--primary-c);
+	
+}
+
+/* Radio Input #1 */
+input#one:checked ~ .check { transform: translate(-50px, 33px); }
+
+/* Radio Input #2  */
+input#two:checked ~ .check { transform: translate(-50px, -25px); }
+
+input#three:checked ~ .check { transform: translate(-50px, -25px); }
+input#four:checked ~ .check { transform: translate(-50px, -25px); }
+input#five:checked ~ .check { transform: translate(-50px, -25px); }
+
+.button {
+ 
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 37px 35px;
+    cursor: pointer;
+    margin-left: -33px;
+    width: 109px;
+}
+
+.button1 {background-color: #eb7b1f;} /* Green */
+.button2 {background-color: white;} /* Blue */  
+
+
+
+a:link, a:visited {
+  background-color: #000000;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: rgb(247, 178, 76);
+}
+
+#logo {
+  display: inline-block;
+  margin: 15px; /* margin: 20px was off */
+  
+  height: 60px;
+  width: auto; /* correct proportions to specified height */
+  border-radius: 50%; /* makes it a circle */
+}
+</style>
+</head>
+<body>
+  
+<div class="topnav">
+
+  <a class="active" href="#home">Product</a>
+  <a href="#about">Consult</a>
+  <a href="#contact">Educate with us</a>
+  <a href="#contact">Blogs and Reviews</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text"  placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<div class="searchbox" >  
+    <form>   
+    <input type="text" class="text1" placeholder=" Search...." name="find">   
+    <button type="submit">Submit</button>   
+    </form>  
+    </div>   
+
+    <div class="card">
+      <h2>Categories</h2>
+      
+      <ul>
+        <li>
+          <input type="radio" name="name" id="one" checked />
+          <label for="one">CBD oils(23)</label>
+          
+          <div class="check"></div>
+        </li>
+        
+        <li>
+          <input type="radio" name="name" id="two" />
+          <label for="two">Dropper(8)</label>
+          
+          <div class="check"></div>
+        </li>
+        <li>
+          <input type="radio" name="name" id="three" />
+          <label for="three">Tablets(34)</label>
+          
+          <div class="check"></div>
+        </li>
+        <li>
+          <input type="radio" name="name" id="four" />
+          <label for="four">Creams(20)</label>
+          
+          <div class="check"></div>
+        </li>
+        <li>
+          <input type="radio" name="name" id="five" />
+          <label for="five">All(85)</label>
+          
+          <div class="check"></div>
+        </li>
+        <h1>Quantity</h1>
+      </ul>
+    </div>
+
+    <div class="card2">
+      
+      <img src="card2.jpg" alt="Flowers in Chania">
+      <ul>
+       
+
+        <a href="#"  >F-Spectrum</a>
+        <a href="#" >B-Spectrum</a><br>
+        <h2>₹13,000</h2>
+      
+       
+        <button class="button button1">View</button>
+        <button class="button button2">Add</button>
+      </ul>
+      </div>
+      <div class="card3">
+      
+        <img src="card3.jpg" alt="Flowers in Chania">
+      <ul>
+        <a href="#" target="_blank">F-Spectrum</a>
+        <a href="#" target="_blank">F-Spectrum</a>
+        <h2>₹4,500</h2>
+        <button class="button button1">View</button>
+        <button class="button button2">Add</button>
+        
+      </ul>
+      </div>
+      <div class="card4">
+      
+        <img src="card4.jpg" alt="Flowers in Chania">
+      <ul>
+        <a href="#" target="_blank">F-Spectrum</a>
+        <a href="#" target="_blank">F-Spectrum</a>
+        <h2>₹8,500</h2>
+        <button class="button button1">View</button>
+        <button class="button button2">Add</button>
+        
+      </ul>
+      </div>
+
+      
+
+
+    
+
+    
+</body>
+</html>
